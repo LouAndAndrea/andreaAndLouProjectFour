@@ -29,15 +29,21 @@ $('input[type="submit"]').on('click', function(e){
 
     console.log("radio buttons",app.pokeChoices);
 
-    console.log(app.pokeChoices[0].value);
+    // console.log(app.pokeChoices[0].value);
 
     app.choiceOne = app.pokeChoices[0].value;
-    // app.pokeChoiceArray=[]
     // app.pokeChoiceArray.push(app.choiceOne);
 
     // console.log(app.ChoiceOne);
     
     // app.pokeChoices[i]
+
+    app.pokeArray = [];
+
+    for (let i = 0; i < app.pokeChoices.length; i++){
+        app.pokeArray.push(app.pokeChoices[i].value);
+        console.log(app.pokeArray);
+    }
     
 
     //push user input to the array

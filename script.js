@@ -23,30 +23,27 @@ $('input[type="submit"]').on('click', function(e){
     console.log(`submitted`);
 
     //grab user input
+    app.pokeChoices = [...$('input[type="radio"]:checked')]
     console.log($('input[type="radio"]:checked'));
 
-    app.pokeChoices = [...$('input[type="radio"]:checked')]
-
-    console.log("radio buttons",app.pokeChoices);
-
-    // console.log(app.pokeChoices[0].value);
-
-    app.choiceOne = app.pokeChoices[0].value;
-    // app.pokeChoiceArray.push(app.choiceOne);
-
-    // console.log(app.ChoiceOne);
-    
-    // app.pokeChoices[i]
-
+    //an empty array to store user input
     app.pokeArray = [];
 
+    //for each user input
     for (let i = 0; i < app.pokeChoices.length; i++){
+        //push user input to the array
         app.pokeArray.push(app.pokeChoices[i].value);
         console.log(app.pokeArray);
     }
+
+    //alternative way of above
+    // app.pokeChoices = [];
+    // $('input[type=radio]:checked').each(function () {
+    //     app.pokeChoices.push($(this).val());
+    // });
     
 
-    //push user input to the array
+
     //for each item, pull in api call
 })
 // Each answer will have an api call stored as a variable.or the id number stored and inputed into the API call

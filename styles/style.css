@@ -1,0 +1,427 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: '';
+  clear: both;
+  height: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.visuallyHidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+p,
+a,
+h1,
+h2 {
+  font-family: "Noto Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 7rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  width: 85%;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 4.7rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2.8rem;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+a,
+input[type=submit],
+button {
+  color: #000000;
+  font-size: 2.6rem;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border: 2.5px solid #000000;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+a:focus,
+a:hover,
+input[type=submit]:focus,
+input[type=submit]:hover,
+button {
+  background: #ffffff;
+}
+
+button {
+  margin-top: 0;
+}
+
+header,
+div.question,
+.results {
+  background: url(../assets/bgImage.png);
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.wrapper {
+  width: 70%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.whiteContainer {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  padding: 30px 30px;
+  margin: 20px;
+  border-radius: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header a {
+  background: #d75c75;
+}
+
+div.startPage {
+  background-color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 80px 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+a {
+  background: #F29758;
+}
+
+input[type=submit] {
+  background: #D75C75;
+}
+
+label {
+  font-size: 2.4rem;
+  background: #ffffff;
+  border-radius: 30px;
+  padding: 6px 35px;
+  width: 100%;
+  margin: 12px auto;
+  border: 3px solid #ffffff;
+}
+
+input[type=radio] {
+  widows: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  left: -9999999px;
+}
+
+input[type=radio]:focus + label,
+input[type=radio]:hover + label {
+  border: 3px solid #000000;
+  font-weight: bold;
+}
+
+input[type=radio]:checked + label {
+  border: 3px solid #000000;
+  font-weight: bold;
+}
+
+.optionContainer {
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.results .wrapper {
+  width: 93%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.resultsTitle {
+  text-align: center;
+}
+
+.resultsTitle p {
+  font-size: 3.5rem;
+}
+
+.resultsTitle h2 {
+  font-size: 5rem;
+  margin: 30px 0 0;
+}
+
+.pokeInfo {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 35px;
+  text-align: center;
+}
+
+div.type {
+  margin-bottom: 16px;
+}
+
+div.type p {
+  background: salmon;
+  border-radius: 20px;
+  margin: 10px 0;
+  padding: 3px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

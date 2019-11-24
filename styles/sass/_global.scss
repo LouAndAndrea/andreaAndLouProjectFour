@@ -1,0 +1,97 @@
+html {
+    font-size: 62.5%;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+p,
+a,
+h1, 
+h2 {
+    font-family: $font;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 7rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    width: 85%;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 4.7rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2.8rem;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+a,
+input[type=submit],
+button {
+    color: #000000;
+    font-size: 2.6rem;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 2.5px solid #000000;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+a:focus,
+a:hover,
+input[type=submit]:focus,
+input[type=submit]:hover,
+button {
+    background: #ffffff;
+}
+
+button {
+    margin-top: 0;
+}
+
+header,
+div.question,
+.results {
+    background: url(../assets/bgImage.png);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 70%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.whiteContainer {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    padding: 30px 30px;
+    margin: 20px;
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+

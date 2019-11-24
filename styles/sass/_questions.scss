@@ -1,0 +1,45 @@
+a {
+    background: #F29758;
+}
+
+input[type=submit] {
+    background: #D75C75;
+}
+
+
+
+label {
+    font-size: 2.4rem;
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 6px 35px;
+    width: 100%;
+    margin: 12px auto;
+    border: 3px solid #ffffff;
+}
+
+input[type=radio] {
+    widows: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    left: -9999999px;
+}
+
+input[type=radio]:focus + label,
+input[type=radio]:hover + label {
+    // visibility: hidden;
+    border:3px solid #000000;
+    font-weight: bold;
+}
+
+input[type=radio]:checked+label {
+    border:3px solid #000000;
+    font-weight: bold;
+}
+
+.optionContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}

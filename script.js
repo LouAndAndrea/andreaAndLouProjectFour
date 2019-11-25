@@ -15,6 +15,7 @@ $('input[type="submit"]').on('click', function (e) {
     //prevent submit button default action
     e.preventDefault();
     
+    
     //grab user input and store in array as strings
     app.radioButtonChoices = [...$('input[type="radio"]:checked')]
 
@@ -41,21 +42,33 @@ $('input[type="submit"]').on('click', function (e) {
             app.APIresults = ApiPromises.map(pokeObject => {
                 return pokeObject[0]; //take the data object at index 0 and store it in a new array
             });
-        
-            app.APIresults.forEach( e => {
-                const pokeName = e.name;
-                const pokeType1 = e.types[0].type.name;
+
+            for(i=0; i < app.APIresults.length; i++) {
+                app.pokeName = app.APIresults[i].name;
+                $('li.pokemon' + (i+1) + '> .pokeInfo > h3').html(app.pokeName);
+
                 //height in metres
-                const pokeHeight = e.height / 10;
+                app.pokeHeight = app.APIresults[i].height / 10;
+                $('li.pokemon' + (i + 1) + '> .pokeInfo > .stats > p:first-of-type').html(`Height: ${app.pokeHeight} m`);
+
                 //weight in kg
-                const pokeWeight = e.weight / 10;
-                if (e.types[1]) {
-                    const pokeType2 = e.types[1].type.name;
-                    console.log(pokeType2);
+                app.pokeWeight = app.APIresults[i].weight / 10;
+                $('li.pokemon' + (i + 1) + '> .pokeInfo > .stats > p:last-of-type').html(`Weight: ${app.pokeWeight} kg`);
+
+                //type 1
+                app.pokeType1 = app.APIresults[i].types[0].type.name;
+                $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').html(app.pokeType1);
+
+                if (app.APIresults[i].types[1]) {
+                    app.pokeType2 = app.APIresults[i].types[1].type.name;
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').html(app.pokeType2);
                 }
-                console.log(pokeName, pokeType1, 'height', pokeHeight, 'weight', pokeWeight);
-        });
+            }
         })
+})
+
+$('#reset').on('click', function(e){
+    $('input[type="radio"]').prop('checked', false);
 })
 
 // Each answer will have an api call stored as a variable.or the id number stored and inputed into the API call

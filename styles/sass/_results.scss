@@ -2,13 +2,9 @@ img{
     width: 100%;
 }
 
-ul {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    padding: 0;
-    justify-content: center;
-}
+
+
+
 
 .team {
     display: flex;
@@ -19,6 +15,18 @@ ul {
 .results .wrapper {
     width: 93%;
     flex-direction: column;
+
+    ul {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+    }
+
+    li {
+        flex: 0 0 calc(100% / 3);
+    }
 }
 
 .resultsTitle {

@@ -34,11 +34,11 @@ h3 {
     font-size: 2.8rem;
     margin: 0;
     margin-bottom: 20px;
+    text-transform: capitalize;
 }
 
 a,
-input[type=submit],
-button {
+input[type=submit] {
     color: #000000;
     font-size: 2.6rem;
     text-decoration: none;
@@ -53,13 +53,19 @@ button {
 a:focus,
 a:hover,
 input[type=submit]:focus,
-input[type=submit]:hover,
-button {
+input[type=submit]:hover {
     background: #ffffff;
 }
 
-button {
+#reset {
     margin-top: 0;
+    background: #ffffff;
+    margin-bottom: 10px;
+}
+
+#reset:hover,
+#reset:focus {
+    background: #F29758;
 }
 
 header,

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="wrapper">
             <div class="whiteContainer startPage">
                 <h1>What's Your Pokemon Team?</h1>
@@ -215,14 +215,14 @@
                                 <input type="radio" id="parking" name="q6" value="69">
                                 <label for="parking">A parking lot</label> 
                             </div>
-                            <input type="submit" value="Submit">
+                            <a href="#results"><input type="submit" value="Submit"></a>
                         </div>
                     </div>
                 </div>
 
             </form>
         </section>
-        <section class="results">
+        <section class="results" id="results">
             <div class="wrapper">
                 <div class="resultsTitle">
                     <h2>Congratulations!</h2>
@@ -332,7 +332,7 @@
                         </div>
                     </ul>
                 </div>
-                <button>Retake Quiz</button>
+                <a href="#header" id="reset" >Retake Quiz</a>
             </div>
         </section>
     </main>

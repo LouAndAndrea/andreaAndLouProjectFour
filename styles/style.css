@@ -215,11 +215,11 @@ h3 {
   font-size: 2.8rem;
   margin: 0;
   margin-bottom: 20px;
+  text-transform: capitalize;
 }
 
 a,
-input[type=submit],
-button {
+input[type=submit] {
   color: #000000;
   font-size: 2.6rem;
   text-decoration: none;
@@ -234,13 +234,19 @@ button {
 a:focus,
 a:hover,
 input[type=submit]:focus,
-input[type=submit]:hover,
-button {
+input[type=submit]:hover {
   background: #ffffff;
 }
 
-button {
+#reset {
   margin-top: 0;
+  background: #ffffff;
+  margin-bottom: 10px;
+}
+
+#reset:hover,
+#reset:focus {
+  background: #F29758;
 }
 
 header,
@@ -362,19 +368,6 @@ img {
   width: 100%;
 }
 
-ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .team {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -390,6 +383,25 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.results .wrapper ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.results .wrapper li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(100% / 3);
+          flex: 0 0 calc(100% / 3);
 }
 
 .resultsTitle {

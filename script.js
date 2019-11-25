@@ -21,37 +21,35 @@ $('.start').on('click', function(){
     $('#q6').hide();
 });
 
-// $('.q1Link').on('click', function(){
-//     // console.log('q1 was clicked');
-//     // $('#q1').hide();
-//     if ($('#q1> input[type = "radio"]').val() !== undefined){
-//         console.log('it works!');
-//         $('#q2').show();
-//     }
-// });
+$('.q1Link').on('click', function(){
+    // console.log($('#q1 >div>div>div > input[type="radio"]:checked').length);
+    // console.log($('#q1> input[type = "radio"]').val().length);
+    if ($('#q1 >div>div>div > input[type="radio"]:checked').length === 1){
+        $('#q2').show();
+        $('p.errorMessage').hide();
+
+    } else {
+        $('p.errorMessage').text(`Please make a selection.`);
+    }
+});
 
 $('.q2Link').on('click', function(){
-    // console.log('q1 was clicked');
     $('#q3').show();
 });
 
 $('.q3Link').on('click', function(){
-    // console.log('q1 was clicked');
     $('#q4').show();
 });
 
 $('.q4Link').on('click', function(){
-    // console.log('q1 was clicked');
     $('#q5').show();
 });
 
 $('.q5Link').on('click', function(){
-    // console.log('q1 was clicked');
     $('#q6').show();
 });
 
 $('#submit').on('click', function(){
-    // console.log('q1 was clicked');
     $('#results').show();
 });
 

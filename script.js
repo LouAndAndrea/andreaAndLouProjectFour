@@ -11,6 +11,8 @@ app.APIresults = [];
 
 
 //Show only the section that the user is currently on
+
+//When quiz starts, show the first question and hide the start page
 $('.start').on('click', function(){
     $('#quiz').show();
     $('#header').hide();
@@ -21,6 +23,7 @@ $('.start').on('click', function(){
     $('#q6').hide();
 });
 
+//When user clicks "Next Question"
 $('.q1Link').on('click', function(){
 
     if ($('#q1 > div > div > div > input[type="radio"]:checked').length === 1){

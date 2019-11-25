@@ -10,11 +10,8 @@ app.AjaxPromises = [];
 app.APIresults = [];
 
 // on final submit button
-$('input[type="submit"]').on('click', function (e) {
-
-    //prevent submit button default action
-    e.preventDefault();
-    
+$('#submit').on('click', function () {
+    console.log('test');
     
     //grab user input and store in array as strings
     app.radioButtonChoices = [...$('input[type="radio"]:checked')]
@@ -67,7 +64,7 @@ $('input[type="submit"]').on('click', function (e) {
         })
 })
 
-$('#reset').on('click', function(e){
+$('#reset').on('click', function(){
     $('input[type="radio"]').prop('checked', false);
 })
 

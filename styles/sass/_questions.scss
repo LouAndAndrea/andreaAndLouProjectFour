@@ -1,9 +1,9 @@
 a {
-    background: #F29758;
+    background: $fire;
 }
 
 input[type=submit] {
-    background: #D75C75;
+    background: $fighting;
 }
 
 
@@ -28,7 +28,6 @@ input[type=radio] {
 
 input[type=radio]:focus + label,
 input[type=radio]:hover + label {
-    // visibility: hidden;
     border:3px solid #000000;
     font-weight: bold;
 }

@@ -246,7 +246,7 @@ input[type=submit]:hover {
 
 #reset:hover,
 #reset:focus {
-  background: #F29758;
+  background: #f29758;
 }
 
 header,
@@ -317,11 +317,11 @@ div.startPage {
 }
 
 a {
-  background: #F29758;
+  background: #f29758;
 }
 
 input[type=submit] {
-  background: #D75C75;
+  background: #d75c75;
 }
 
 label {

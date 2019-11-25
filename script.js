@@ -9,6 +9,27 @@ app.arrayOfPokeID = [];
 app.AjaxPromises = [];
 app.APIresults = [];
 
+
+
+//on user click next
+$('.next').on('click', function(){
+    // console.log($('input[type="radio"]:checked').length);
+    
+        $('div.question').each(()=>{            
+            if ($('input[type="radio"]:checked').length === 1){
+                console.log('selection made')
+            } else ($('p.errorMessage').text(`Please make a selection.`));
+        
+        })
+    })
+
+//check if a selection has been made
+//if yes, show next question
+// if no, append under the question title a message that tells user to select an item
+
+//don't let the form submit unless all things are checked
+
+
 // on final submit button
 $('#submit').on('click', function () {
     console.log('test');
@@ -76,6 +97,8 @@ $('#reset').on('click', function(){
 // Append image for each to the dom
 // Grab relevant stats / summary from the API and append to the page
 app.init = function () {
+    $('#quiz').hide();
+    $('#results').hide();
 }
 //document ready
 $(document).ready(function () {

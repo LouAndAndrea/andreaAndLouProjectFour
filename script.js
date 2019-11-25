@@ -22,36 +22,64 @@ $('.start').on('click', function(){
 });
 
 $('.q1Link').on('click', function(){
-    // console.log($('#q1 >div>div>div > input[type="radio"]:checked').length);
-    // console.log($('#q1> input[type = "radio"]').val().length);
-    if ($('#q1 >div>div>div > input[type="radio"]:checked').length === 1){
+
+    if ($('#q1 > div > div > div > input[type="radio"]:checked').length === 1){
         $('#q2').show();
-        $('p.errorMessage').hide();
+        $('.error1').hide();
 
     } else {
-        $('p.errorMessage').text(`Please make a selection.`);
+        $('.error1').text(`Please make a selection.`);
     }
 });
 
 $('.q2Link').on('click', function(){
-    $('#q3').show();
+    
+    if ($('#q2 > div > div > div > input[type="radio"]:checked').length === 1) {
+        $('.error2').hide();
+        $('#q3').show();
+    } else {
+        $('.error2').text(`Please make a selection.`);
+    }
 });
 
 $('.q3Link').on('click', function(){
-    $('#q4').show();
+
+    if ($('#q3 > div > div > div > input[type="radio"]:checked').length === 1) {
+        $('.error3').hide();
+        $('#q4').show();
+    } else {
+        $('.error3').text(`Please make a selection.`);
+    }
 });
 
 $('.q4Link').on('click', function(){
-    $('#q5').show();
+    if ($('#q4 > div > div > div > input[type="radio"]:checked').length === 1) {
+        $('.error4').hide();
+        $('#q5').show();
+    } else {
+        $('.error4').text(`Please make a selection.`);
+    }
 });
 
 $('.q5Link').on('click', function(){
-    $('#q6').show();
+    if ($('#q5 > div > div > div > input[type="radio"]:checked').length === 1) {
+        $('.error5').hide();
+        $('#q6').show();
+    } else {
+        $('.error5').text(`Please make a selection.`);
+    }
 });
 
 $('#submit').on('click', function(){
-    $('#results').show();
+
+    if ($('#q6 > div > div > div > input[type="radio"]:checked').length === 1) {
+        $('.error6').hide();
+        $('#results').show();
+    } else {
+        $('.error6').text(`Please make a selection.`);
+    }
 });
+
 
 //on user click next
 // $('.next').on('click', function(){
@@ -63,13 +91,6 @@ $('#submit').on('click', function(){
     
 //     })
 // })
-
-//check if a selection has been made
-//if yes, show next question
-// if no, append under the question title a message that tells user to select an item
-
-//don't let the form submit unless all things are checked
-
 
 // on final submit button
 $('#submit').on('click', function () {
@@ -133,6 +154,9 @@ $('#submit').on('click', function () {
 
 $('#reset').on('click', function(){
     $('input[type="radio"]').prop('checked', false);
+    $('#header').show();
+    $('#quiz').hide();
+    $('#results').hide();
 })
 
 // Each answer will have an api call stored as a variable.or the id number stored and inputed into the API call

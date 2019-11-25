@@ -10,18 +10,61 @@ app.AjaxPromises = [];
 app.APIresults = [];
 
 
+//Show only the section that the user is currently on
+$('.start').on('click', function(){
+    $('#quiz').show();
+    $('#header').hide();
+    $('#q2').hide();
+    $('#q3').hide();
+    $('#q4').hide();
+    $('#q5').hide();
+    $('#q6').hide();
+});
+
+// $('.q1Link').on('click', function(){
+//     // console.log('q1 was clicked');
+//     // $('#q1').hide();
+//     if ($('#q1> input[type = "radio"]').val() !== undefined){
+//         console.log('it works!');
+//         $('#q2').show();
+//     }
+// });
+
+$('.q2Link').on('click', function(){
+    // console.log('q1 was clicked');
+    $('#q3').show();
+});
+
+$('.q3Link').on('click', function(){
+    // console.log('q1 was clicked');
+    $('#q4').show();
+});
+
+$('.q4Link').on('click', function(){
+    // console.log('q1 was clicked');
+    $('#q5').show();
+});
+
+$('.q5Link').on('click', function(){
+    // console.log('q1 was clicked');
+    $('#q6').show();
+});
+
+$('#submit').on('click', function(){
+    // console.log('q1 was clicked');
+    $('#results').show();
+});
 
 //on user click next
-$('.next').on('click', function(){
-    // console.log($('input[type="radio"]:checked').length);
+// $('.next').on('click', function(){
+//     // console.log($('input[type="radio"]:checked').length);
+//     $('div.question').each(()=>{            
+//         if ($('input[type="radio"]:checked').length === 1){
+//             console.log('selection made')
+//         } else ($('p.errorMessage').text(`Please make a selection.`));
     
-        $('div.question').each(()=>{            
-            if ($('input[type="radio"]:checked').length === 1){
-                console.log('selection made')
-            } else ($('p.errorMessage').text(`Please make a selection.`));
-        
-        })
-    })
+//     })
+// })
 
 //check if a selection has been made
 //if yes, show next question
@@ -32,7 +75,6 @@ $('.next').on('click', function(){
 
 // on final submit button
 $('#submit').on('click', function () {
-    console.log('test');
     
     //grab user input and store in array as strings
     app.radioButtonChoices = [...$('input[type="radio"]:checked')]
@@ -62,8 +104,12 @@ $('#submit').on('click', function () {
             });
 
             for(i=0; i < app.APIresults.length; i++) {
+                //name
                 app.pokeName = app.APIresults[i].name;
                 $('li.pokemon' + (i+1) + '> .pokeInfo > h3').html(app.pokeName);
+
+                //image
+                $('li.pokemon' + (i + 1) + '> div:last-of-type').html(`<img src="./assets/${app.APIresults[i].id}.png";" alt="${app.pokeName}">`)
 
                 //height in metres
                 app.pokeHeight = app.APIresults[i].height / 10;
@@ -80,6 +126,8 @@ $('#submit').on('click', function () {
                 if (app.APIresults[i].types[1]) {
                     app.pokeType2 = app.APIresults[i].types[1].type.name;
                     $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').html(app.pokeType2);
+                } else {
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').hide();
                 }
             }
         })

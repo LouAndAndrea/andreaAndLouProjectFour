@@ -29,6 +29,7 @@ $('.q1Link').on('click', function(){
     if ($('#q1 > div > div > div > input[type="radio"]:checked').length === 1){
         //If they have selected a value, show the next question and hide error message
         $('#q2').show();
+        // $('#q2 > ')
         $('.error1').hide();
 
     } else {

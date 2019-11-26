@@ -21,6 +21,7 @@ $('.start').on('click', function(){
     $('#q4').hide();
     $('#q5').hide();
     $('#q6').hide();
+    $('.errorMessage').hide();
 });
 
 //When user clicks "Next Question"
@@ -34,6 +35,7 @@ $('.q1Link').on('click', function(){
 
     } else {
         //If user did not make a selection, then show an error message
+        $('.error1').show()
         $('.error1').text(`Please make a selection.`);
     }
 });
@@ -44,6 +46,7 @@ $('.q2Link').on('click', function(){
         $('.error2').hide();
         $('#q3').show();
     } else {
+        $('.error2').show()
         $('.error2').text(`Please make a selection.`);
     }
 });
@@ -54,6 +57,7 @@ $('.q3Link').on('click', function(){
         $('.error3').hide();
         $('#q4').show();
     } else {
+        $('.error3').show()
         $('.error3').text(`Please make a selection.`);
     }
 });
@@ -63,6 +67,7 @@ $('.q4Link').on('click', function(){
         $('.error4').hide();
         $('#q5').show();
     } else {
+        $('.error4').show()
         $('.error4').text(`Please make a selection.`);
     }
 });
@@ -72,6 +77,7 @@ $('.q5Link').on('click', function(){
         $('.error5').hide();
         $('#q6').show();
     } else {
+        $('.error5').show()
         $('.error5').text(`Please make a selection.`);
     }
 });
@@ -285,7 +291,7 @@ $('#submit').on('click', function () {
 
                 if (app.pokeType2 === 'fairy' ){
                     $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#ee99ac");
-                }
+                } // end of pokemon type styling
 
                 //show results
                 $('#loading').hide();
@@ -295,6 +301,7 @@ $('#submit').on('click', function () {
         
     } else {
         // ask user to choose an answer
+        $('.error6').show()
         $('.error6').text(`Please make a selection.`);
     }
 })

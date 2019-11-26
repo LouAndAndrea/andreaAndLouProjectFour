@@ -25,12 +25,14 @@ $('.start').on('click', function(){
 
 //When user clicks "Next Question"
 $('.q1Link').on('click', function(){
-
+    //Check if they have selected a value
     if ($('#q1 > div > div > div > input[type="radio"]:checked').length === 1){
+        //If they have selected a value, show the next question and hide error message
         $('#q2').show();
         $('.error1').hide();
 
     } else {
+        //If user did not make a selection, then show an error message
         $('.error1').text(`Please make a selection.`);
     }
 });
@@ -73,27 +75,6 @@ $('.q5Link').on('click', function(){
     }
 });
 
-// $('#submit').on('click', function(){
-
-//     if ($('#q6 > div > div > div > input[type="radio"]:checked').length === 1) {
-//         $('.error6').hide();
-//         $('#results').show();
-//     } else {
-//         $('.error6').text(`Please make a selection.`);
-//     }
-// });
-
-
-//on user click next
-// $('.next').on('click', function(){
-//     // console.log($('input[type="radio"]:checked').length);
-//     $('div.question').each(()=>{            
-//         if ($('input[type="radio"]:checked').length === 1){
-//             console.log('selection made')
-//         } else ($('p.errorMessage').text(`Please make a selection.`));
-    
-//     })
-// })
 
 // on final submit button
 $('#submit').on('click', function () {
@@ -146,18 +127,167 @@ $('#submit').on('click', function () {
                 app.pokeWeight = app.APIresults[i].weight / 10;
                 $('li.pokemon' + (i + 1) + '> .pokeInfo > .stats > p:last-of-type').html(`Weight: ${app.pokeWeight} kg`);
 
+
+                
                 //type 1
                 app.pokeType1 = app.APIresults[i].types[0].type.name;
                 $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').html(app.pokeType1);
-
+                
                 if (app.APIresults[i].types[1]) {
                     app.pokeType2 = app.APIresults[i].types[1].type.name;
                     $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').html(app.pokeType2);
                 } else {
                     $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').hide();
                 }
+                
+                //Change the background of the type, according to the type 
+                
+                if (app.pokeType1 === 'normal' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#a8a878");
+                }
+
+                if (app.pokeType2 === 'normal' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#a8a878");
+                }
+
+                if (app.pokeType1 === 'electric' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#f4bd3e");
+                }
+
+                if (app.pokeType2 === 'electric' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#f4bd3e");
+                }
+                
+                if (app.pokeType1 === 'flying' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#90a8dd");
+                }
+
+                if (app.pokeType2 === 'flying' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#90a8dd");
+                }
+                
+                if (app.pokeType1 === 'grass' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#82d479");
+                }
+
+                if (app.pokeType2 === 'grass' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#82d479");
+                }
+                
+                if (app.pokeType1 === 'fire' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#f29758");
+                }
+
+                if (app.pokeType2 === 'fire' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#f29758");
+                }
+                
+                if (app.pokeType1 === 'fighting' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#d75c75");
+                }
+
+                if (app.pokeType2 === 'fighting' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#d75c75");
+                }
+                
+                if (app.pokeType1 === 'psychic' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#fea399");
+                }
+
+                if (app.pokeType2 === 'psychic' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#fea399");
+                }
+                
+                if (app.pokeType1 === 'dark' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#9c83ce");
+                }
+
+                if (app.pokeType2 === 'dark' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#9c83ce");
+                }
+                
+                if (app.pokeType1 === 'bug' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#91c230");
+                }
+
+                if (app.pokeType2 === 'bug' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#91c230");
+                }
+                
+                if (app.pokeType1 === 'ice' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#74cec0");
+                }
+
+                if (app.pokeType2 === 'ice' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#74cec0");
+                }
+                
+                if (app.pokeType1 === 'ghost' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#7a74d8");
+                }
+
+                if (app.pokeType2 === 'ghost' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#7a74d8");
+                }
+                
+                if (app.pokeType1 === 'steel' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#69adae");
+                }
+
+                if (app.pokeType2 === 'steel' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#69adae");
+                }
+
+                if (app.pokeType1 === 'dragon' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#0582bc");
+                }
+
+                if (app.pokeType2 === 'dragon' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#0582bc");
+                }
+                
+                if (app.pokeType1 === 'poison' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#c962d6");
+                }
+
+                if (app.pokeType2 === 'poison' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#c962d6");
+                }
+                
+                if (app.pokeType1 === 'rock' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#d6cc94");
+                }
+
+                if (app.pokeType2 === 'rock' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#d6cc94");
+                }
+
+                if (app.pokeType1 === 'water' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#73c6e4");
+                }
+
+                if (app.pokeType2 === 'water' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#73c6e4");
+                }
+
+                if (app.pokeType1 === 'ground' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#d49a6b");
+                }
+
+                if (app.pokeType2 === 'ground' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#d49a6b");
+                }
+                
+                if (app.pokeType1 === 'fairy' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:first-of-type').css("background", "#ee99ac");
+                }
+
+                if (app.pokeType2 === 'fairy' ){
+                    $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').css("background", "#ee99ac");
+                }
+
                 //show results
-                // $('#loading').hide();
+                $('#loading').hide();
                 $('#results').show();
             }
         })

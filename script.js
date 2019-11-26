@@ -73,15 +73,15 @@ $('.q5Link').on('click', function(){
     }
 });
 
-$('#submit').on('click', function(){
+// $('#submit').on('click', function(){
 
-    if ($('#q6 > div > div > div > input[type="radio"]:checked').length === 1) {
-        $('.error6').hide();
-        $('#results').show();
-    } else {
-        $('.error6').text(`Please make a selection.`);
-    }
-});
+//     if ($('#q6 > div > div > div > input[type="radio"]:checked').length === 1) {
+//         $('.error6').hide();
+//         $('#results').show();
+//     } else {
+//         $('.error6').text(`Please make a selection.`);
+//     }
+// });
 
 
 //on user click next
@@ -97,7 +97,12 @@ $('#submit').on('click', function(){
 
 // on final submit button
 $('#submit').on('click', function () {
-    
+    // if question six has been answered
+    if ($('#q6 > div > div > div > input[type="radio"]:checked').length === 1) {
+        $('.error6').hide();
+        $('#loading').show();
+
+        
     //grab user input and store in array as strings
     app.radioButtonChoices = [...$('input[type="radio"]:checked')]
 
@@ -151,8 +156,16 @@ $('#submit').on('click', function () {
                 } else {
                     $('li.pokemon' + (i + 1) + '> .pokeInfo > .type > p:last-of-type').hide();
                 }
+                //show results
+                // $('#loading').hide();
+                $('#results').show();
             }
         })
+        
+    } else {
+        // ask user to choose an answer
+        $('.error6').text(`Please make a selection.`);
+    }
 })
 
 $('#reset').on('click', function(){
@@ -171,6 +184,7 @@ $('#reset').on('click', function(){
 // Grab relevant stats / summary from the API and append to the page
 app.init = function () {
     $('#quiz').hide();
+    $('#loading').hide();
     $('#results').hide();
 }
 //document ready

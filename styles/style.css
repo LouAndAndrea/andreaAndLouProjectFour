@@ -252,7 +252,7 @@ input[type=submit]:hover {
 header,
 div.question,
 .results {
-  background: url(../assets/bgImage.png);
+  background: url(../assets/bgImage.jpg);
   background-size: cover;
   min-height: 100vh;
 }
@@ -291,6 +291,15 @@ div.question,
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.loading {
+  width: 60%;
+  padding: 40px;
+}
+
+.loading h2 {
+  margin-bottom: 0;
 }
 
 header a {

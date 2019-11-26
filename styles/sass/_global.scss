@@ -37,12 +37,33 @@ h1 {
         font-size: 4rem;
         margin-bottom: 15px;
     }
+
+    @include smallPhone {
+        margin-bottom: 0;
+    }
 }
 
 h2 {
     font-size: 4.7rem;
     margin-bottom: 20px;
     text-align: center;
+
+    @include largeTablet {
+        font-size: 4rem;
+    }
+
+    @include smallTablet {
+        font-size: 3.5rem;
+    }
+
+    @include largePhone {
+        font-size: 3rem;
+    }
+
+    @include smallPhone {
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+    }
 }
 
 h3 {
@@ -63,6 +84,11 @@ input[type=submit] {
     border: 2.5px solid #000000;
     border-radius: 50px;
     margin-top: 20px;
+
+    @include largePhone {
+        font-size: 2rem;
+        margin-top: 5px;
+    }
 }
 
 a:focus,
@@ -107,18 +133,30 @@ div.question,
     @include smallTablet {
         width: 90%;
     }
+
+    @include largePhone {
+        width: 98%;
+    }
 }
 
 .whiteContainer {
     background-color: rgba(255, 255, 255, 0.5);
     width: 100%;
-    padding: 30px 30px;
+    padding: 30px;
     margin: 20px;
     border-radius: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    @include smallTablet {
+        padding: 20px;
+    }
+
+    @include largePhone {
+        padding: 20px 10px;
+    }
 }
 
 .loading {

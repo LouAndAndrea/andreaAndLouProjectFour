@@ -40,3 +40,9 @@ $ground: #d49a6b;
        @content;
    }
 }
+
+@mixin smallPhone{
+   @media (max-width: 400px){
+       @content;
+   }
+}

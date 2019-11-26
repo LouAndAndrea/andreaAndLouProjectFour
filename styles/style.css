@@ -226,10 +226,41 @@ h1 {
   }
 }
 
+@media (max-width: 400px) {
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
 h2 {
   font-size: 4.7rem;
   margin-bottom: 20px;
   text-align: center;
+}
+
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 700px) {
+  h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 550px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+  }
 }
 
 h3 {
@@ -250,6 +281,14 @@ input[type=submit] {
   border: 2.5px solid #000000;
   border-radius: 50px;
   margin-top: 20px;
+}
+
+@media (max-width: 550px) {
+  a,
+  input[type=submit] {
+    font-size: 2rem;
+    margin-top: 5px;
+  }
 }
 
 a:focus,
@@ -306,10 +345,16 @@ div.question,
   }
 }
 
+@media (max-width: 550px) {
+  .wrapper {
+    width: 98%;
+  }
+}
+
 .whiteContainer {
   background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
-  padding: 30px 30px;
+  padding: 30px;
   margin: 20px;
   border-radius: 60px;
   display: -webkit-box;
@@ -324,6 +369,18 @@ div.question,
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+@media (max-width: 700px) {
+  .whiteContainer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .whiteContainer {
+    padding: 20px 10px;
+  }
 }
 
 .loading {
@@ -376,6 +433,12 @@ div.startPage {
   }
 }
 
+@media (max-width: 400px) {
+  a.start {
+    margin-top: 10px;
+  }
+}
+
 a {
   background: #f29758;
 }
@@ -392,6 +455,18 @@ label {
   width: 100%;
   margin: 12px auto;
   border: 3px solid #ffffff;
+}
+
+@media (max-width: 550px) {
+  label {
+    padding: 6px 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  label {
+    margin: 5px auto;
+  }
 }
 
 input[type=radio] {
@@ -424,6 +499,18 @@ input[type=radio]:checked + label {
           flex-direction: column;
 }
 
+@media (max-width: 700px) {
+  .optionContainer {
+    width: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+  .optionContainer {
+    width: 95%;
+  }
+}
+
 .errorMessage {
   color: #d75c75;
   font-weight: bold;
@@ -446,6 +533,25 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+  .team {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 70%;
+            flex: 0 1 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .team {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .results .wrapper {
@@ -469,6 +575,20 @@ img {
           justify-content: center;
 }
 
+@media (max-width: 700px) {
+  .results .wrapper ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 550px) {
+  .results .wrapper ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 .results .wrapper li {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 calc(100% / 3);
@@ -486,6 +606,15 @@ img {
           justify-content: space-between;
 }
 
+@media (max-width: 700px) {
+  .results .wrapper li {
+    height: auto;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 250px;
+            flex: 0 1 250px;
+  }
+}
+
 .resultsTitle {
   text-align: center;
 }
@@ -495,7 +624,6 @@ img {
 }
 
 .resultsTitle h2 {
-  font-size: 5rem;
   margin: 30px 0 0;
 }
 

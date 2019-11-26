@@ -306,6 +306,7 @@ $('#submit').on('click', function () {
     }
 })
 
+//reset the quiz
 $('#reset').on('click', function(){
     $('input[type="radio"]').prop('checked', false);
     $('#header').show();
@@ -313,13 +314,7 @@ $('#reset').on('click', function(){
     $('#results').hide();
 })
 
-// Each answer will have an api call stored as a variable.or the id number stored and inputed into the API call
-// push value of user input(equal to id# at api) for each question to an array
-// Pull in api call for each answer
-// pass through all api calls at end on user submit(when getting results)
-// Append stored variables to api url and make a call for each
-// Append image for each to the dom
-// Grab relevant stats / summary from the API and append to the page
+//initialize the page
 app.init = function () {
     $('#quiz').hide();
     $('#loading').hide();

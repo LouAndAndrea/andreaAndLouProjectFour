@@ -10,4 +10,16 @@ div.startPage {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @include largeTablet {
+        padding: 80px 40px;
+    }
+
+    @include smallTablet {
+        padding: 40px 40px;
+    }
+
+    @include largePhone {
+        padding: 20px 20px;
+    }
 }

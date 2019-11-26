@@ -22,6 +22,21 @@ h1 {
     margin-bottom: 50px;
     width: 85%;
     letter-spacing: 2px;
+
+    @include largeTablet {
+        font-size: 6rem;
+        margin-bottom: 30px;
+    }
+    
+    @include smallTablet {
+        font-size: 5rem;
+        margin-bottom: 20px;
+    }
+
+    @include largePhone {
+        font-size: 4rem;
+        margin-bottom: 15px;
+    }
 }
 
 h2 {
@@ -84,6 +99,14 @@ div.question,
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+
+    @include largeTablet {
+        width: 80%;
+    }
+    
+    @include smallTablet {
+        width: 90%;
+    }
 }
 
 .whiteContainer {

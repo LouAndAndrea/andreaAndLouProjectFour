@@ -20,3 +20,23 @@ $poison: #c962d6;
 $rock: #d6cc94;
 $water: #73c6e4;
 $ground: #d49a6b;
+
+// mixins 
+
+@mixin largeTablet{
+   @media (max-width: 1000px){
+       @content;
+   }
+}
+
+@mixin smallTablet{
+   @media (max-width: 700px){
+       @content;
+   }
+}
+
+@mixin largePhone{
+   @media (max-width: 550px){
+       @content;
+   }
+}
